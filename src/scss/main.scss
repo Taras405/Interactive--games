@@ -1,14 +1,14 @@
-@import 'reset.scss';
-@import 'base.scss';
-@import 'mixins.scss';
-@import 'placeholder.scss';
-@import 'variables.scss';
+@use 'base/reset.scss';
+@use 'base/base.scss';
+@use 'abstracts/mixins.scss' as mix;
+@use 'abstracts/placeholder.scss';
+@use 'abstracts/variables.scss' as *;
 
-@import '../sections/footer/footer.scss';
-@import '../sections/header/header.scss';
-@import '../sections/section1/section1.scss';
-@import '../sections/section2/section2.scss';
-@import '../sections/section3/section3.scss';
-@import '../sections/section4/section4.scss';
-@import '../sections/section5/section5.scss';
-@import '../sections/section6/section6.scss';
+@use '../sections/footer/footer.scss';
+@use '../sections/header/header.scss';
+@use '../sections/section1/section1.scss';
+@use '../sections/section2/section2.scss';
+@use '../sections/section3/section3.scss';
+@use '../sections/section4/section4.scss';
+@use '../sections/section5/section5.scss';
+@use '../sections/section6/section6.scss';
