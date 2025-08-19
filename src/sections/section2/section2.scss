@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", "Montserrat", sans-serif;
+  background: #fff;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+
+  .title {
+    margin: 36px 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .choices {
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+    list-style: none;
+    margin-bottom: 36px;
+
+    .choice {
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .result {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .scoreboard {
+    position: absolute;
+    right: 56px;
+    top: 250px;
+    text-align: left;
+  }
+
+  .btn {
+    margin-top: 46px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #333;
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 650px) {
+  .container {
+    .scoreboard {
+      position: static;
+      margin-left: 15vw;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .container {
+    .scoreboard {
+      font-size: 9vw;
+    }
+
+    .choices {
+      flex-direction: column;
+      gap: 20px;
+
+      .choice {
+        width: 100%;
+      }
+    }
+
+    .btn {
+      width: 100%;
+      padding: 16px;
+    }
+  }
+}
