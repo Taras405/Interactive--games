@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Калькулятори</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Калькулятор</h1>
+
+      <div class="calc">
+        <input
+          id="num1"
+          type="number"
+          class="input"
+          placeholder="Введіть число"
+        />
+
+        <div class="ops">
+          <button class="btn" data-op="+">+</button>
+          <button class="btn" data-op="-">−</button>
+          <button class="btn" data-op="*">*</button>
+          <button class="btn" data-op="/">/</button>
+        </div>
+
+        <input
+          id="num2"
+          type="number"
+          class="input"
+          placeholder="Введіть число"
+        />
+        <button id="eq" class="btn">=</button>
+        <span id="calcResult" class="result">Результат</span>
+      </div>
+
+      <hr class="divider" />
+
+      <section class="time">
+        <h2>Калькулятор часу</h2>
+        <div class="time-box">
+          <input
+            id="minutes"
+            type="number"
+            class="time-input"
+            placeholder="Введіть число"
+          />
+          <button id="timeBtn" class="time-btn" aria-label="convert">🔍</button>
+          <span id="timeResult" class="time-result"
+            >............................</span
+          >
+        </div>
+      </section>
+
+      <hr class="divider" />
+    </main>
+
+    <script src="./section3.js"></script>
+  </body>
+</html>
