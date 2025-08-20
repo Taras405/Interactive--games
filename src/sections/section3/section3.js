@@ -1,5 +1,3 @@
-import './section3.scss';
-
 let operation = null;
 
 document.querySelectorAll('.calc__ops .calc__btn').forEach(btn => {
