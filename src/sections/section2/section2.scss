@@ -1,4 +1,3 @@
-
 // body {
 //   font-family: "DM Sans", "Montserrat", sans-serif;
 //   color: #000;
@@ -10,6 +9,10 @@
 
 .section2{
   font-family: "Montserrat", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
   .game__title {
@@ -73,6 +76,14 @@ position: absolute;
     }
   }
 
+  @media (max-width: 1024px) {
+    .game__scoreboard {
+      position: static;
+    margin-left: 3vw;
+    margin-top: 1rem;
+    }
+    
+  }
 
 // Media queries
 @media (max-width: 650px) {
@@ -83,12 +94,28 @@ position: absolute;
   }
 }
 
+@media (max-width: 520px) {
+  .list__choices {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    .item__choice {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
 @media (max-width: 300px) {
     .game__scoreboard {
       font-size: 9vw;
     }
 
     .list__choices {
+      width: 100%;
       flex-direction: column;
       gap: 20px;
       align-items: center;
