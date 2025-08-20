@@ -1,0 +1,73 @@
+<section class="calc-section">
+  <h1 class="calc-section__title">Калькулятор</h1>
+
+  <article class="calc">
+    <input
+      id="num1"
+      type="number"
+      class="calc__input"
+      placeholder="Введіть число"
+    />
+
+    <ul class="calc__ops">
+      <li>
+        <button class="calc__btn" data-op="+" aria-label="додавання">+</button>
+      </li>
+      <li>
+        <button class="calc__btn" data-op="-" aria-label="віднімання">−</button>
+      </li>
+      <li>
+        <button class="calc__btn" data-op="*" aria-label="множення">*</button>
+      </li>
+      <li>
+        <button class="calc__btn" data-op="/" aria-label="ділення">/</button>
+      </li>
+    </ul>
+
+    <input
+      id="num2"
+      type="number"
+      class="calc__input"
+      placeholder="Введіть число"
+    />
+
+    <button
+      id="eq"
+      class="calc__btn calc__btn--eq"
+      type="button"
+      aria-label="обчислити"
+    >
+      =
+    </button>
+    <output id="calcResult" class="calc__result">Результат</output>
+  </article>
+
+  <hr class="calc-section__divider" />
+
+  <article class="time">
+    <h2 class="time__title">Калькулятор часу</h2>
+    <div class="time__box">
+      <input
+        id="minutes"
+        type="number"
+        min="0"
+        class="time__input"
+        placeholder="Введіть число"
+      />
+      <button
+        id="timeBtn"
+        class="time__btn"
+        type="button"
+        aria-label="конвертувати"
+      >
+        🔍
+      </button>
+      <output id="timeResult" class="time__result"
+        >............................</output
+      >
+    </div>
+  </article>
+
+  <hr class="calc-section__divider" />
+</section>
+<script src="./section3.js"></script>
