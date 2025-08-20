@@ -1,6 +1,6 @@
 const CHOICES = ["rock", "paper", "scissors"];
-const choiceEls = document.querySelectorAll(".choice");
-const result = document.querySelector(".result");
+const choiceEls = document.querySelectorAll(".item__choice");
+const result = document.querySelector(".game__result");
 const computerScore = document.getElementById("computer-score");
 const playerScore = document.getElementById("player-score");
 

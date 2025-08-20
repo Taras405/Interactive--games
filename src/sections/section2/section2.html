@@ -1,27 +1,27 @@
  <section class="game">
         <div class="container">
-            <h1 class="title">Камінь - ножиці - папір</h1>
+            <h1 class="game__title">Камінь - ножиці - папір</h1>
 
-            <div class="choices">
-                <div class="choice" data-choice="rock">
+            <ul class="list__choices">
+                <li class="item__choice" data-choice="rock">
                     <img src="images/rock.png" alt="Камінь">
-                </div>
-                <div class="choice" data-choice="scissors">
+                </li>
+                <li class="item__choice" data-choice="scissors">
                     <img src="images/scissors.png" alt="Ножиці">
-                </div>
-                <div class="choice" data-choice="paper">
+                </li>
+                <li class="item__choice" data-choice="paper">
                     <img src="images/paper.png" alt="Папір">
-                </div>
-            </div>
+                </li>
+            </ul>
 
-            <div class="result" id="result">Зробіть вибір!</div>
+            <div class="game__result" id="result">Зробіть вибір!</div>
 
-            <div class="scoreboard">
+            <div class="game__scoreboard">
                 <p>Рахунок:</p>
                 <p>Комп'ютер - <span id="computer-score">0</span></p>
                 <p>Ви - <span id="player-score">0</span></p>
             </div>
 
-            <button class="btn" type="button" onclick="playComputer()">Варіант комп'ютера</button>
+            <button class="game__btn" type="button" onclick="playComputer()">Варіант комп'ютера</button>
         </div>
     </section>

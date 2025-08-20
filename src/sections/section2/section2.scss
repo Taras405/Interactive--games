@@ -14,26 +14,26 @@ body {
   align-items: center;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
+// .container {
+//   max-width: 800px;
+//   margin: auto;
+//   padding: 20px;
+//   text-align: center;
 
-  .title {
+  .game__title {
     margin: 36px 0;
     font-size: 1rem;
     font-weight: 400;
   }
 
-  .choices {
+  .list__choices {
     display: flex;
     justify-content: center;
     gap: 38px;
     list-style: none;
     margin-bottom: 36px;
 
-    .choice {
+    .item__choice {
       transition: transform 0.2s;
 
       &:hover {
@@ -42,21 +42,21 @@ body {
     }
   }
 
-  .result {
+  .game__result {
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
   }
 
-  .scoreboard {
+  .game__scoreboard {
     position: absolute;
     right: 56px;
     top: 250px;
     text-align: left;
   }
 
-  .btn {
+  .game__btn {
     margin-top: 46px;
     background: #000;
     color: #fff;
@@ -71,37 +71,33 @@ body {
       background: #333;
     }
   }
-}
+
 
 // Media queries
 @media (max-width: 650px) {
-  .container {
-    .scoreboard {
+    .game__scoreboard {
       position: static;
       margin-left: 15vw;
       margin-top: 1rem;
-    }
   }
 }
 
 @media (max-width: 300px) {
-  .container {
-    .scoreboard {
+    .game__scoreboard {
       font-size: 9vw;
     }
 
-    .choices {
+    .list__choices {
       flex-direction: column;
       gap: 20px;
 
-      .choice {
+      .item__choice {
         width: 100%;
       }
     }
 
-    .btn {
+    .game__btn {
       width: 100%;
       padding: 16px;
     }
-  }
 }
