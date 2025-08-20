@@ -39,8 +39,4 @@ body {
 
   background-repeat: repeat-y;
   background-size: cover;
-
-  @media (max-width: 1240px) {
-    background-size: contain;
-  }
 }
