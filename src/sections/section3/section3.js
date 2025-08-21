@@ -48,7 +48,7 @@ document.getElementById('timeBtn').addEventListener('click', () => {
   const out = document.getElementById('timeResult');
 
   if (isNaN(m)) {
-    out.textContent = 'Введіть число!';
+    out.textContent = 'Введіть хвилини!';
     return;
   }
 
