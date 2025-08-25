@@ -1,3 +1,5 @@
+import './scss/main.scss';
+
 import './sections/footer/footer.js';
 import './sections/header/header.js';
 import './sections/section1/section1.js';
