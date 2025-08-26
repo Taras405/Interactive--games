@@ -1,4 +1,4 @@
-import './scss/main.scss';
+// import './scss/main.scss';
 
 import './sections/footer/footer.js';
 import './sections/header/header.js';
@@ -8,3 +8,5 @@ import './sections/section3/section3.js';
 import './sections/section4/section4.js';
 import './sections/section5/section5.js';
 import './sections/section6/section6.js';
+import './sections/section7/section7.js';
+import './sections/section7/section7.js';
