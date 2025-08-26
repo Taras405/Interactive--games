@@ -1,4 +1,4 @@
-// import './scss/main.scss';
+import './scss/main.scss';
 
 import './sections/footer/footer.js';
 import './sections/header/header.js';
