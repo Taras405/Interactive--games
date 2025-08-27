@@ -1,0 +1,99 @@
+.footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+.footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+
+    .footer-logo {
+      flex: 1;
+      font-size: 22px;
+      font-weight: bold;
+
+      .logo-icon {
+        display: block;
+        font-size: 26px;
+      }
+
+      .logo-text {
+          :root {
+  --font-family: "Montserrat Alternates", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Sacramento", sans-serif;
+}
+        }
+      }
+    }
+
+    .footer-contacts {
+      flex: 1;
+      font-size: 14px;
+      line-height: 1.6;
+      :root {
+  --font-family: "Montserrat Alternates", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Sacramento", sans-serif;
+}
+    }
+
+    .footer-subscribe {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input {
+        width: 204px;
+        height: 35px;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #aaa;
+        outline: none;
+      }
+
+      button {
+        width: 107px;
+        height: 35px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background: black;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background: #444;
+        }
+      }
+
+      .footer-note {
+        font-size: 12px;
+        color: #666;
+      }
+    }
+
+
+ 
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+
+      .footer-subscribe {
+        align-items: center;
+        input {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+  }
