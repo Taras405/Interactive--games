@@ -7,7 +7,8 @@
 //   align-items: center;
 // }
 
-.container.section2{
+
+.section2 {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -15,82 +16,82 @@
   font-family: "Montserrat Alternates";
 }
 
-  .game__title {
-    color: #000;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-align: center;
-margin: 36px 0;
-  }
+.game__title {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin: 36px 0;
+}
 
-  .list__choices {
-    display: flex;
-    justify-content: center;
-    gap: 38px;
-    list-style: none;
-    margin-bottom: 36px;
+.list__choices {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  list-style: none;
+  margin-bottom: 36px;
 
-    .item__choice {
-      transition: transform 0.2s;
+  .item__choice {
+    transition: transform 0.2s;
 
-      &:hover {
-        transform: scale(1.1);
-      }
+    &:hover {
+      transform: scale(1.1);
     }
   }
+}
 
-  .game__result {
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-    margin-bottom: 36px;
-  }
+.game__result {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 36px;
+}
 
-  .game__scoreboard {
-position: absolute;
+.game__scoreboard {
+  position: absolute;
   right: 249px;
   top: 186px;
   text-align: left;
+}
+
+.game__btn {
+  margin-top: 46px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: auto;
+  display: flex;
+  text-align: center;
+
+  &:hover {
+    background: #333;
   }
+}
 
-  .game__btn {
-    margin-top: 46px;
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 12px 24px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin: auto;
-    display: flex;
-    text-align: center;
-
-    &:hover {
-      background: #333;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .game__scoreboard {
-      position: static;
+@media (max-width: 1024px) {
+  .game__scoreboard {
+    position: static;
     margin-left: 3vw;
     margin-top: 1rem;
-    }
-    
   }
+
+}
 
 // Media queries
 @media (max-width: 650px) {
-    .game__scoreboard {
-      position: static;
-      margin-left: 15vw;
-      margin-top: 1rem;
+  .game__scoreboard {
+    position: static;
+    margin-left: 15vw;
+    margin-top: 1rem;
   }
 }
 
@@ -110,22 +111,22 @@ position: absolute;
 }
 
 @media (max-width: 300px) {
-    .game__scoreboard {
-      font-size: 9vw;
-    }
+  .game__scoreboard {
+    font-size: 9vw;
+  }
 
-    .list__choices {
+  .list__choices {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    .item__choice {
       width: 100%;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-
-      .item__choice {
-        width: 100%;
-      }
     }
+  }
 
-    .game__btn {
-      padding: 10px 10px;
-    }
+  .game__btn {
+    padding: 10px 10px;
+  }
 }
