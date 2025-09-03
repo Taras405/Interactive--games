@@ -1,16 +1,19 @@
 .calc-section {
   text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #111;
 
   &__title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   &__divider {
-    margin: 1.5rem 0;
+    margin: 2rem auto;
+    max-width: 90%;
     border: none;
-    border-top: 2px solid #444;
+    border-top: 1px solid #000;
   }
 }
 
@@ -22,62 +25,59 @@
   flex-wrap: wrap;
 
   &__input {
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.2rem;
     border: none;
     border-radius: 999px;
-    background-color: #ddd;
+    background-color: #d6d6d6;
     font-size: 1rem;
     min-width: 140px;
     text-align: center;
+    box-shadow: 3px 3px 0 #bfbfbf;
 
     &::placeholder {
-      color: #7E7E7E;
+      color: #7e7e7e;
     }
   }
 
   &__ops {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
   }
 
   &__btn {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border: none;
     border-radius: 50%;
     background-color: #000;
     color: #fff;
     font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
+    box-shadow: 3px 3px 0 #555;
     transition: transform 0.2s, background 0.2s;
 
     &:hover {
-      background-color: #333;
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      background-color: #222;
     }
 
     &--eq {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-    }
-
-    &.active {
-      outline: 2px solid #888;
+      width: 42px;
+      height: 42px;
     }
   }
 
   &__result {
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.2rem;
     border-radius: 999px;
-    background-color: #ddd;
+    background-color: #d6d6d6;
     font-size: 1rem;
     min-width: 120px;
     display: inline-block;
+    text-align: center;
+    box-shadow: 3px 3px 0 #bfbfbf;
   }
 }
 
@@ -85,7 +85,8 @@
   margin-top: 2rem;
 
   &__title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
     margin-bottom: 1rem;
   }
 
@@ -98,30 +99,33 @@
   }
 
   &__input {
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.2rem;
     border: none;
     border-radius: 999px 0 0 999px;
-    background-color: #ddd;
+    background-color: #d6d6d6;
     font-size: 1rem;
     min-width: 160px;
+    box-shadow: 3px 3px 0 #bfbfbf;
 
     &::placeholder {
-      color: #7E7E7E;
+      color: #7e7e7e;
     }
   }
 
   &__btn {
-    padding: 0.6rem 0.9rem;
+    padding: 0.7rem 1.1rem;
     border: none;
     border-radius: 0 999px 999px 0;
     background-color: #000;
     color: #fff;
     font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
+    box-shadow: 3px 3px 0 #555;
     transition: background 0.2s;
 
     &:hover {
-      background-color: #333;
+      background-color: #222;
     }
   }
 
