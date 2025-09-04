@@ -25,8 +25,10 @@ const ball = {
   dy: 0,
 };
 
+import ballSrc from './img/ball.svg';
+
 const ballImg = new Image();
-ballImg.src = './sections/section5/img/ball.svg';
+ballImg.src = ballSrc;
 
 function drawBall() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
