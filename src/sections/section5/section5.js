@@ -6,8 +6,6 @@ football.innerHTML = `
 
 const canvas = document.getElementById('footballGame');
 const ctx = canvas.getContext('2d');
-// width: 720px;
-// height: 220px;
 
 canvas.style = `
   display: block;
@@ -25,8 +23,11 @@ const ball = {
   dy: 0,
 };
 
+import ballSrc from './img/ball.svg';
+
 const ballImg = new Image();
-ballImg.src = './sections/section5/img/ball.svg';
+ballImg.src = ballSrc;
+ballImg.alt = "футбольний м'яч";
 
 function drawBall() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -70,7 +71,6 @@ function update() {
   requestAnimationFrame(update);
 }
 
-// Удар по м’ячу
 canvas.addEventListener('click', e => {
   const rect = canvas.getBoundingClientRect();
   const clickX = e.clientX - rect.left;
