@@ -9,4 +9,4 @@ import './sections/section4/section4.js';
 import './sections/section5/section5.js';
 import './sections/section6/section6.js';
 import './sections/section7/section7.js';
-import './sections/section7/section7.js';
+import './sections/section8/section8.js';
