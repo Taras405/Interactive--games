@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 .footer {
   background: #fff;
   padding-top: 60px;
@@ -6,7 +6,7 @@
   flex: 1;
   display: flex;
   justify-content: space-between;
-  align-items: center;           
+  align-items: center;
   text-align: center;
   padding: 20px 40px;
 }
@@ -18,11 +18,10 @@
   font-weight: bold;
   padding-right: 1100px;
   margin-top: auto;
-
-  .logo-icon {
-    display: block;
-    font-size: 26px;
-  }
+}
+.footer-logo .logo-icon {
+  display: block;
+  font-size: 26px;
 }
 
 .footer-subscribe {
@@ -34,15 +33,15 @@
   gap: 10px;
 }
 
-  .input-email {
-    width: 204px;
-    height: 35px;
-    border-radius: 20px;
-    border: 1px solid #aaa;
-    outline: none;
-  }
+.input-email {
+  width: 204px;
+  height: 35px;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+  outline: none;
+}
 
- .modal-open-btn {
+.modal-open-btn {
   border-radius: 20px;
   width: 107px;
   height: 35px;
@@ -86,13 +85,14 @@
 
 .modal-close-btn {
   position: absolute;
-  top: 10px;   /* відступ зверху */
+  top: 10px; /* відступ зверху */
   right: 10px; /* відступ справа */
   background: none;
   border: none;
   cursor: pointer;
 }
+
 footer-contacts {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
