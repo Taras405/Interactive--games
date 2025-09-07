@@ -6,7 +6,6 @@ const dotsContainer = document.getElementById('dots');
 
 let currentIndex = 0;
 
-// Створюємо точки
 slides.forEach((_, index) => {
   const dot = document.createElement('li');
   if (index === 0) dot.classList.add('active');
