@@ -1,0 +1,307 @@
+// $toggle-light: #fff;
+// $toggle-dark: #000;
+
+$toggle-light: #fff;
+$toggle-dark: #000;
+$track-bg: #ddd;
+$toggle-light: #fff;
+$toggle-dark: #000;
+$track-bg-light: #ddd;
+$track-bg-dark: #333;
+$thumb-size: 16px;
+$track-width: 40px;
+$track-height: 20px;
+$thumb-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+html {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  color: inherit;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+
+// Apply only to common text elements
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li,
+button,
+input,
+textarea,
+div,
+strong,
+em,
+small {
+  color: inherit;
+}
+
+.header {
+  outline: 2px solid red;
+  padding-top: 0.913vh;
+  padding-bottom: 0.913vh;
+
+  a {
+    text-decoration: none;
+  }
+
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // padding: 0 20px;
+  // outline: 2px solid red;
+
+  &__nav {
+    // display: flex;
+    // align-items: center;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // list-style: none;
+    // gap: 50px;
+    // margin: 0;
+    // padding: 0;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 12.152vw;
+    // outline: 2px solid red;
+
+    &__link {
+    }
+
+    &__heading {
+      color: #000;
+      font-family: 'Montserrat Alternates';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &__text {
+      color: #000;
+      font-family: Sacramento;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__link-list {
+  }
+
+  &__link {
+    color: #000;
+    font-family: 'Montserrat Alternates';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 1.736vw;
+    margin-right: 1.736vw;
+  }
+
+  &__toggle {
+    // outline: 2px solid red;
+    position: relative;
+    margin-right: 12.152vw;
+    display: flex;
+    // display: inline-block;
+    align-items: center;
+    justify-content: center;
+    gap: 1.736vw;
+
+    // Theme Toggle Styles
+    .theme-toggle {
+      position: relative;
+      // width: 40px;
+      // height: 20px;
+      width: $track-width;
+      height: $track-height;
+      background: $track-bg-light;
+      // background: $track-bg;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      overflow: hidden;
+      transition: background 0.3s ease;
+
+      // Initially: light mode track
+      background: $track-bg;
+
+      // When dark mode is active
+      &.dark {
+        // background: darken($toggle-dark, 20%);
+        background: $track-bg-dark;
+      }
+    }
+
+    // The sliding "thumb" that moves across the track
+    .slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      // width: 16px;
+      // height: 16px;
+      width: $thumb-size;
+      height: $thumb-size;
+      background: $toggle-light;
+      border-radius: 50%;
+      // transition: transform 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
+      transform: translateX(0);
+      box-shadow: $thumb-shadow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+
+      .slider-icon {
+        width: 12px;
+        height: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        &.sun {
+          opacity: 1; // visible in light mode
+        }
+      }
+
+      // When parent button has .dark, move slider to the right
+      .theme-toggle.dark & {
+        background: $toggle-dark;
+        transform: translateX(18px);
+
+        .slider-icon {
+          &.sun {
+            opacity: 0;
+          }
+          &.moon {
+            outline: 2px solid red;
+            opacity: 1; // show moon in dark mode
+          }
+        }
+      }
+    }
+
+    //   .theme-toggle {
+    //     width: 40px;
+    //     height: 20px;
+    //     flex-shrink: 0;
+    //     border-radius: 25px;
+    //     border: none;
+
+    //     // ::before {
+    //     //   content: '';
+    //     //   position: absolute;
+    //     //   top: 0;
+    //     //   left: 0;
+    //     //   width: 100%;
+    //     //   height: 100%;
+    //     //   background: linear-gradient(90deg, #fff, #ddd);
+    //     //   z-index: 1;
+    //     //   opacity: 0.7;
+    //     //   border-radius: 15px;
+    //     // }
+    //   }
+
+    //   .icon {
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     font-size: 14px;
+    //     // color: white;
+    //     transition: opacity 0.3s ease;
+    //     z-index: 2;
+    //   }
+
+    //   .sun {
+    //     right: 10px;
+    //   }
+
+    //   .moon {
+    //     left: 10px;
+    //   }
+
+    //   .slider {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 40px;
+    //     height: 30px;
+    //     background-color: #fff;
+    //     // border-radius: 15px;
+    //     transition: transform 0.3s ease;
+    //     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    //     z-index: 3;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     width: 40px;
+    //     // height: 20px;
+    //     border-radius: 25px;
+    //     border: none;
+
+    //     .slider-icon {
+    //       width: 15.033px;
+    //       height: 14.667px;
+    //     }
+
+    //     .moon {
+    //       outline: 2px solid red;
+    //     }
+    //   }
+
+    //   .theme-toggle.dark {
+    //     background-color: #333;
+    //   }
+
+    //   .theme-toggle.dark .moon {
+    //     opacity: 0;
+    //   }
+
+    //   .theme-toggle.dark .sun {
+    //     opacity: 1;
+    //   }
+
+    //   .theme-toggle.dark .slider {
+    //     transform: translateX(30px);
+    //   }
+
+    //   .toggle-text {
+    //     color: #000;
+    //     text-align: right;
+    //     font-family: 'Montserrat Alternates';
+    //     font-size: 12px;
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     line-height: normal;
+    //   }
+  }
+}
