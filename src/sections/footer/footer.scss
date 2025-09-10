@@ -1,5 +1,6 @@
 
 .footer {
+  width: auto;
   background: #fff;
   padding-top: 60px;
   font-family: Arial, sans-serif;
@@ -68,9 +69,13 @@
 }
 
 .modal {
+  display: flex;              // активуємо flexbox
+  justify-content: center;    // по центру по горизонталі
+  align-items: center;        // по центру по вертикалі
+  text-align: center;
   position: fixed;
-  width: 600px;
-  height: 400px;
+  width: 463px;
+  height: 245px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
@@ -95,4 +100,37 @@
 footer-contacts {
     flex: 1;
     text-align: center;
+    margin: 5px 0;
+    font-size: 14px;
 }
+
+ .icon {
+  position: absolute;
+      width: 30px;
+      height: 30px;
+
+      &.top-left {
+        left: 43px;
+        top: 119px;
+      }
+
+      &.bottom-left {
+        left: 87px;
+        bottom: 80px;
+      }
+
+      &.top-right {
+        left: 450px;
+        top: 100px;
+      }
+
+      &.bottom-right {
+        left: 380px;
+        top: 180px;
+      }
+    }
+    .h2{
+      font-size: 24px;
+      font-weight: bold;
+      
+    }
