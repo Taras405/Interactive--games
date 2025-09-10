@@ -38,12 +38,13 @@
   width: 215px;
 }
 .input__center__section1 {
-  width: 215px;
+  width: 179.8px;
   height: 35px;
-  border-radius: 20px;
+  // border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   padding-left: 10px;
-  padding-right: 45px;
-
+  padding-right: 10px;
   font-family: Montserrat Alternates;
   font-weight: 400;
   font-size: 12px;
@@ -57,13 +58,18 @@
   top: 0;
   right: 0px;
   width: 35px;
-  height: 36px;
+  height: 35px;
   border: none;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 10px;
   background-color: black;
   cursor: pointer;
+  box-shadow: 2.5px 3px 0px 0px #00000040;
+  transition: box-shadow 0.1s ease;
+}
+.button__center__section1:active {
+  box-shadow: none;
 }
 .form__end__section1 {
   margin-top: 36px;
@@ -71,12 +77,13 @@
   width: 150px;
 }
 .input__end__section1 {
-    width: 150px;
+    width: 115px;
   height: 35px;
-  border-radius: 20px;
+  // border-radius: 20px;
+    border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   padding-left: 10px;
-  padding-right: 45px;
-
+  padding-right: 10px;
   font-family: Montserrat Alternates;
   font-weight: 400;
   font-size: 12px;
@@ -87,14 +94,19 @@
 }
 .button__end__section1 {
     position: absolute;
-  top: 1px;
+  top: 0px;
   right: 0px;
   width: 35px;
-  height: 36px;
+  height: 35px;
   border: none;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 10px;
   background-color: black;
   cursor: pointer;
+  box-shadow: 3px 3px 0px 0px #00000040;
+  transition: box-shadow 0.1s ease;
+}
+.button__end__section1:active {
+  box-shadow: none;
 }
