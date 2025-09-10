@@ -44,3 +44,4 @@ const divEnd = document.querySelector('.div__end__section1')
 
 formEnd.appendChild(inputGuessNumber)
 formEnd.appendChild(buttonGuessNumber)
+
