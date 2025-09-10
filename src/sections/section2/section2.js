@@ -1,4 +1,4 @@
-const CHOICES = ["rock", "paper", "scissors"];
+const CHOICES = ["камінь", "папір", "ножиці"];
 const choiceEls = document.querySelectorAll(".item__choice");
 const result = document.querySelector(".game__result");
 const computerScore = document.getElementById("computer-score");
@@ -13,6 +13,9 @@ choiceEls.forEach((el) => {
     playerChoice = el.dataset.choice;
     result.textContent = "Натисніть 'Варіант комп'ютера'";
     result.style.color = "black";
+    // Highlight selected choice
+    choiceEls.forEach(c => c.classList.remove("selected"));
+    el.classList.add("selected");
   });
 });
 
@@ -29,32 +32,27 @@ function playComputer() {
 
   if (playerChoice === computerChoice) {
     outcome = "Нічия!";
+  } else if (
+    (playerChoice === "камінь" && computerChoice === "ножиці") ||
+    (playerChoice === "папір" && computerChoice === "камінь") ||
+    (playerChoice === "ножиці" && computerChoice === "папір")
+  ) {
+    outcome = "Ви виграли!";
+    playerScoreValue++;
+    playerScore.textContent = playerScoreValue;
+    color = "green";
   } else {
-    switch (playerChoice) {
-      case "rock":
-        outcome = computerChoice === "scissors" ? "Ви виграли!" : "Комп'ютер виграв!";
-        break;
-      case "paper":
-        outcome = computerChoice === "rock" ? "Ви виграли!" : "Комп'ютер виграв!";
-        break;
-      case "scissors":
-        outcome = computerChoice === "paper" ? "Ви виграли!" : "Комп'ютер виграв!";
-        break;
-    }
-    if (outcome === "Ви виграли!") {
-      playerScoreValue++;
-      playerScore.textContent = playerScoreValue;
-      color = "green";
-    } else if (outcome === "Комп'ютер виграв!") {
-      computerScoreValue++;
-      computerScore.textContent = computerScoreValue;
-      color = "red";
-    }
+    outcome = "Комп'ютер виграв!";
+    computerScoreValue++;
+    computerScore.textContent = computerScoreValue;
+    color = "red";
   }
 
   result.textContent = `Ви: ${playerChoice}, Комп'ютер: ${computerChoice}. ${outcome}`;
   result.style.color = color;
 
+  // Remove highlight after round
+  choiceEls.forEach(c => c.classList.remove("selected"));
   playerChoice = null;
 }
 
