@@ -1,3 +1,12 @@
+body {
+  font-family: "DM Sans", "Montserrat", sans-serif;
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 $color-bg: #d9d9d9;
 $color-dark: #000;
 $color-text: #333;
