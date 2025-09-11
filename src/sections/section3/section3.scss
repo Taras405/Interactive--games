@@ -1,16 +1,22 @@
+$color-bg: #d9d9d9;
+$color-dark: #000;
+$color-text: #333;
+$shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+
 .calc-section {
   text-align: center;
+  padding: 2rem 1rem;
 
   &__title {
     font-size: 1.5rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   &__divider {
-    margin: 1.5rem 0;
+    margin: 2rem 0;
     border: none;
-    border-top: 2px solid #444;
+    border-top: 2px solid $color-dark;
   }
 }
 
@@ -18,26 +24,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
 
   &__input {
-    padding: 0.6rem 1.2rem;
+    background: $color-bg;
     border: none;
     border-radius: 999px;
-    background-color: #ddd;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
-    min-width: 140px;
-    text-align: center;
+    color: $color-text;
+    box-shadow: $shadow;
 
-    &::placeholder {
-      color: #7E7E7E;
+    &:focus {
+      outline: none;
+      box-shadow: 2px 2px 0 $color-dark;
     }
   }
 
   &__ops {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     list-style: none;
     margin: 0;
@@ -45,89 +52,146 @@
   }
 
   &__btn {
-    width: 40px;
-    height: 40px;
-    border: none;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background-color: #000;
+    border: none;
+    background: $color-dark;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: transform 0.2s, background 0.2s;
+    box-shadow: $shadow;
+    transition: transform 0.15s ease;
 
     &:hover {
-      background-color: #333;
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
 
     &--eq {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-    }
-
-    &.active {
-      outline: 2px solid #888;
+      font-weight: bold;
     }
   }
 
   &__result {
-    padding: 0.6rem 1.2rem;
-    border-radius: 999px;
-    background-color: #ddd;
-    font-size: 1rem;
-    min-width: 120px;
     display: inline-block;
+    background: $color-bg;
+    border-radius: 999px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: $color-text;
+    min-width: 140px;
+    box-shadow: $shadow;
   }
 }
 
 .time {
-  margin-top: 2rem;
+  text-align: center;
 
   &__title {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
   }
 
   &__box {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
     justify-content: center;
+    gap: 1rem;
     flex-wrap: wrap;
   }
 
   &__input {
-    padding: 0.6rem 1.2rem;
+    background: $color-bg;
     border: none;
     border-radius: 999px 0 0 999px;
-    background-color: #ddd;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
-    min-width: 160px;
+    color: $color-text;
+    box-shadow: $shadow;
 
-    &::placeholder {
-      color: #7E7E7E;
+    &:focus {
+      outline: none;
+      box-shadow: 2px 2px 0 $color-dark;
     }
   }
 
   &__btn {
-    padding: 0.6rem 0.9rem;
-    border: none;
+    width: 50px;
+    height: 50px;
     border-radius: 0 999px 999px 0;
-    background-color: #000;
-    color: #fff;
-    font-size: 1rem;
+    border: none;
+    background: $color-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow;
     cursor: pointer;
-    transition: background 0.2s;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
 
     &:hover {
-      background-color: #333;
+      transform: scale(1.1);
     }
   }
 
   &__result {
     font-size: 1rem;
-    font-weight: 500;
-    margin-left: 1rem;
+    color: $color-dark;
+  }
+}
+
+// 📱 Адаптив
+@media (max-width: 768px) {
+  .calc {
+    flex-direction: column;
+    gap: 1.2rem;
+
+    &__btn {
+      width: 55px;
+      height: 55px;
+      font-size: 1.4rem;
+    }
+
+    &__input,
+    &__result {
+      width: 100%;
+      max-width: 320px;
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
+
+    &__ops {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.8rem;
+    }
+  }
+
+  .time {
+    &__box {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__input {
+      border-radius: 999px;
+      width: 100%;
+      max-width: 320px;
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
+
+    &__btn {
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+    }
+
+    &__result {
+      font-size: 1.1rem;
+    }
   }
 }

@@ -26,7 +26,7 @@ section.appendChild(p);
 
 
 const inputs = document.querySelectorAll('.input__number');
-const result = document.querySelector('.number__result');
+const result = document.querySelector('.number__text'); 
 
 inputs.forEach(input => {
     input.addEventListener('input', () =>{
