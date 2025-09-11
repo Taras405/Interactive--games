@@ -12,6 +12,10 @@ scientistsHtml.innerHTML = `
         <div class="slot"></div>
         <div class="slot"></div>
         <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
       </div>
       <div class="scientists__tasks">
         <button class="task-btn" type="button">
