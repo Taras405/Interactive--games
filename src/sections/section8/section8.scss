@@ -1,0 +1,114 @@
+// .section8 {
+//   max-width: 860px;
+//   margin: 0 auto;
+
+//   .scientists__slots {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     gap: 36px 59px;
+//     justify-content: center;
+//     margin-bottom: 36px;
+
+//     .slot {
+//       width: 100px;
+//       height: 100px;
+//       background-color: #d9d9d9;
+//       border-radius: 20px;
+//     }
+//   }
+
+//   .scientists__tasks {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     gap: 20px 36px;
+//     justify-items: center;
+
+//     .task-btn {
+//       display: inline-flex;
+//       align-items: flex-start;
+//       padding: 10px 20px;
+//       border-radius: 20px;
+//       text-align: left;
+//       background-color: #000;
+//       color: #fff;
+//       border: none;
+//       font-family: 'Montserrat Alternates', sans-serif;
+//       font-size: 12px;
+//       font-weight: 400;
+//       box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+//       cursor: pointer;
+//       transition: 250ms linear;
+
+//           min-width: 227px;
+//       max-width: 328px;
+//       min-height: 15px;
+//       max-height: 30px;
+//       line-height: 1.2;
+
+//       &:hover {
+//         background-color: #333;
+//       }
+//     }
+//   }
+// }
+
+.section8 {
+  max-width: 860px;
+  margin: 0 auto;
+
+  .scientists__slots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 40px;
+    justify-content: center;
+    margin-bottom: 36px;
+
+    .slot {
+      width: 120px;
+      height: 120px;
+      background-color: #d9d9d9;
+      border-radius: 16px;
+    }
+  }
+}
+
+.scientists__tasks {
+  width: 860px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px 40px;
+  grid-template-columns: repeat(2, 120px);
+  justify-content: center;
+}
+
+.task-btn:nth-child(1),
+.task-btn:nth-child(3),
+.task-btn:nth-child(5),
+.task-btn:nth-child(7) {
+  justify-self: right;
+}
+.task-btn:nth-child(2),
+.task-btn:nth-child(4),
+.task-btn:nth-child(6),
+.task-btn:nth-child(8) {
+  justify-self: left;
+}
+.task-btn {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.2;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  width: auto;
+  max-width: 420px;
+  text-align: left;
+  transition: 200ms linear;
+}
+
+.task-btn:nth-child(9) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
