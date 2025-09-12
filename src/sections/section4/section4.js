@@ -103,7 +103,7 @@ function update() {
       width: 30,
       height: obstacleType === 'cactus' ? 40 : 30,
       type: obstacleType,
-      speed: 5,
+      speed: 4,
     };
     obstacles.push(obstacle);
   }
