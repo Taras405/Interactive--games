@@ -1,12 +1,3 @@
-body {
-  font-family: "DM Sans", "Montserrat", sans-serif;
-  color: #000;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 $color-bg: #d9d9d9;
 $color-dark: #000;
 $color-text: #333;
@@ -70,7 +61,7 @@ $shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
     font-size: 1.2rem;
     cursor: pointer;
     box-shadow: $shadow;
-    transition: transform 0.15s ease;
+    transition: 150ms linear;
 
     &:hover {
       transform: scale(1.1);
@@ -106,7 +97,7 @@ $shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    // gap: 1rem;
     flex-wrap: wrap;
   }
 
@@ -127,8 +118,8 @@ $shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
 
   &__btn {
     width: 50px;
-    height: 50px;
-    border-radius: 0 999px 999px 0;
+    height: 45px;
+    border-radius: 0 50% 50% 0;
     border: none;
     background: $color-dark;
     display: flex;
@@ -136,6 +127,9 @@ $shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
     justify-content: center;
     box-shadow: $shadow;
     cursor: pointer;
+    transition: 150ms linear;
+
+    margin-right: 33px;
 
     img {
       width: 20px;
@@ -150,10 +144,10 @@ $shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
   &__result {
     font-size: 1rem;
     color: $color-dark;
+    margin-left: 33px;
   }
 }
 
-// 📱 Адаптив
 @media (max-width: 768px) {
   .calc {
     flex-direction: column;
