@@ -27,6 +27,8 @@ const dino = {
 };
 
 let obstacles = [];
+let consecutiveCacti = 0;
+let lastCactusX = -Infinity;
 const images = {};
 const imageNames = [
   'dino1',
@@ -65,6 +67,8 @@ function startGame() {
   dino.velocityY = 0;
   dino.isJumping = false;
   obstacles = [];
+  consecutiveCacti = 0;
+  lastCactusX = -Infinity;
   gameOverElement.style.display = 'none';
   gameLoop();
 }
@@ -95,17 +99,43 @@ function update() {
     dino.frame = (dino.frame + 1) % 2;
   }
 
-  if (Math.random() < 0.01) {
-    const obstacleType = Math.random() < 0.7 ? 'cactus' : 'pterodactyl';
-    const obstacle = {
-      x: canvas.width,
-      y: obstacleType === 'cactus' ? 310 : 240,
-      width: 30,
-      height: obstacleType === 'cactus' ? 40 : 30,
-      type: obstacleType,
-      speed: 4,
-    };
-    obstacles.push(obstacle);
+  if (Math.random() < 0.015) {
+    let obstacleType = Math.random() < 0.8 ? 'cactus' : 'pterodactyl';
+    let canSpawn = true;
+
+    if (obstacleType === 'cactus') {
+      if (consecutiveCacti >= 2) {
+        canSpawn = false;
+      } else if (lastCactusX > canvas.width - 80) {
+        canSpawn = false;
+      }
+    } else {
+      for (let obs of obstacles) {
+        if (obs.type === 'cactus' && obs.x > canvas.width - 80) {
+          canSpawn = false;
+          break;
+        }
+      }
+    }
+
+    if (canSpawn) {
+      const obstacle = {
+        x: canvas.width,
+        y: obstacleType === 'cactus' ? 310 : 240,
+        width: 30,
+        height: obstacleType === 'cactus' ? 40 : 30,
+        type: obstacleType,
+        speed: 4,
+      };
+      obstacles.push(obstacle);
+
+      if (obstacleType === 'cactus') {
+        consecutiveCacti++;
+        lastCactusX = canvas.width;
+      } else {
+        consecutiveCacti = 0;
+      }
+    }
   }
 
   obstacles.forEach((obstacle, index) => {
