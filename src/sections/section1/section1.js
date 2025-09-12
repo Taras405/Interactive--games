@@ -18,7 +18,6 @@ button.appendChild(img)
 console.log(button);
 
 const form = document.querySelector('.form__center__section1')
-const divCenter = document.querySelector('.div__center__section1')
 const formEnd = document.querySelector('.form__end__section1')
 
 
@@ -40,8 +39,38 @@ buttonGuessNumber.setAttribute('type', 'button')
 buttonGuessNumber.appendChild(imgLupa)
 
 
-const divEnd = document.querySelector('.div__end__section1')
-
 formEnd.appendChild(inputGuessNumber)
 formEnd.appendChild(buttonGuessNumber)
 
+const inputContainer = document.querySelector('.input__container')
+
+inputContainer.appendChild(input)
+inputContainer.appendChild(button)
+
+console.log(inputContainer);
+
+const resultText = document.createElement('p');
+resultText.classList.add('p__center__result');
+form.appendChild(resultText);
+
+function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+button.addEventListener('click', () => {
+    const value = input.value.trim();
+
+    if (/^\d{4}$/.test(value)) {
+        const year = parseInt(value, 10);
+        if (isLeapYear(year)) {
+            resultText.textContent = 'Ви народилися у високосний рік!';
+            resultText.style.color = 'green';
+        } else {
+            resultText.textContent = 'Ви народилися не у високосний рік.';
+            resultText.style.color = 'red';
+        }
+    } else {
+        resultText.textContent = 'Будь ласка, введіть коректний 4-значний рік.';
+        resultText.style.color = 'black';
+    }
+});
