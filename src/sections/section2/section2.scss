@@ -52,10 +52,9 @@
 }
 
 .game__scoreboard {
-  position: absolute;
-  right: 249px;
-  top: 186px;
-  text-align: left;
+ position: relative;
+  right: -294px;
+  top: -87px;
 }
 
 .game__btn {

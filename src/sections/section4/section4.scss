@@ -1,0 +1,68 @@
+.section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleGoogleDinosaur {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#game-canvas {
+  display: block;
+}
+
+.game-ui {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.score {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+#game-over h2 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+}
+
+#game-over p {
+  margin: 0;
+  font-size: 1rem;
+}

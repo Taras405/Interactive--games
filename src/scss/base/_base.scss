@@ -1,33 +1,9 @@
 .container {
-  max-width: 720px;
+  width: 1090px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-
-  @media (max-width: 1920px) {
-    max-width: calc(100% - 2 * 360px);
-  }
-
-  @media (max-width: 1440px) {
-    max-width: calc(100% - 2 * 267px);
-  }
-
-  @media (max-width: 1024px) {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  @media (max-width: 768px) {
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
-
-  @media (max-width: 520px) {
-    max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 body {
@@ -38,6 +14,10 @@ body {
 
   background-repeat: repeat-y;
   background-size: cover;
+
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .titleGame {
