@@ -3,20 +3,22 @@
   margin-bottom: 36px;
 }
 .h2__start__section1 {
-  width: 386px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
   height: 29px;
   font-size: 24px;
   display: flex;
   justify-content: center;
 }
 .p__center__section1 {
-
+font-family: 'Montserrat Alternates', sans-serif;
   font-size: 16px;
   display: flex;
   justify-content: center;
 }
 .p__end__section1 {
- 
+ font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   display: flex;
   justify-content: center;
@@ -30,6 +32,8 @@
   column-gap: 150px;
 }
 .input__center__section1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
   width: 215px;
   height: 35px;
   border-top-left-radius: 20px;
@@ -59,15 +63,21 @@
 }
 .form__end__section1 {
   margin-top: 36px;
-  position: relative;
-  width: 150px;
+  width: 100%;
   margin-left: 200px;
+  display: flex;
+  align-items: center;
+  column-gap: 150px;
 }
 .input__end__section1 {
-    width: 115px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  width: 150px;
   height: 35px;
-    border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   padding-left: 10px;
   padding-right: 10px;
   font-size: 12px;
@@ -77,9 +87,9 @@
   border: none;
 }
 .button__end__section1 {
-    position: absolute;
-  top: 0;
-  right: 0;
+  position: absolute;
+  top: 100;
+  right: 810px;
   width: 35px;
   height: 35px;
   border: none;
@@ -88,16 +98,21 @@
   padding: 10px;
   background-color: black;
   cursor: pointer;
-  box-shadow: 3px 3px 0px 0px #00000040;
-  transition: box-shadow 0.1s ease;
-}
-.button__end__section1:active {
-  box-shadow: none;
 }
 .p__center__result{
     font-size: 16px;
+     font-family: Montserrat Alternates;
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
 }
-
-.input__container{
+.p__end__result{
+  font-family: Montserrat Alternates;
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+text-align: right;
+}
+.input__container, .inputEndContainer{
 position: relative;
 }
