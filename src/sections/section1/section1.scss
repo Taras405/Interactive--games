@@ -11,13 +11,13 @@
   justify-content: center;
 }
 .p__center__section1 {
-font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 16px;
   display: flex;
   justify-content: center;
 }
 .p__end__section1 {
- font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 400;
   font-size: 16px;
   display: flex;
@@ -31,10 +31,35 @@ font-family: 'Montserrat Alternates', sans-serif;
   align-items: center;
   column-gap: 150px;
 }
+.form__end__section1 {
+  margin-top: 36px;
+  width: 100%;
+  margin-left: 200px;
+  display: flex;
+  align-items: center;
+  column-gap: 150px;
+}
 .input__center__section1 {
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 400;
   width: 215px;
+  height: 35px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  color: #7e7e7e;
+  background-color: #d7d7d7;
+  box-shadow: 3px 3px 0px 0px #00000040;
+  border: none;
+}
+.input__end__section1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+  width: 150px;
   height: 35px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -61,37 +86,12 @@ font-family: 'Montserrat Alternates', sans-serif;
   background-color: black;
   cursor: pointer;
 }
-.form__end__section1 {
-  margin-top: 36px;
-  width: 100%;
-  margin-left: 200px;
-  display: flex;
-  align-items: center;
-  column-gap: 150px;
-}
-.input__end__section1 {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 400;
-  width: 150px;
-  height: 35px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 12px;
-  color: #7e7e7e;
-  background-color: #d7d7d7;
-  box-shadow: 3px 3px 0px 0px #00000040;
-  border: none;
-}
 .button__end__section1 {
-  position: absolute;
-  top: 100;
-  right: 810px;
+  position: relative;
+  bottom: -4.1px;
   width: 35px;
   height: 35px;
+  margin-left: -35px;
   border: none;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -99,20 +99,25 @@ font-family: 'Montserrat Alternates', sans-serif;
   background-color: black;
   cursor: pointer;
 }
-.p__center__result{
-    font-size: 16px;
-     font-family: Montserrat Alternates;
-font-weight: 400;
-font-style: Regular;
-font-size: 12px;
-}
-.p__end__result{
+.p__center__result {
+  font-size: 16px;
   font-family: Montserrat Alternates;
-font-weight: 400;
-font-style: Regular;
-font-size: 12px;
-text-align: right;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
 }
-.input__container, .inputEndContainer{
-position: relative;
+.p__end__result {
+  font-family: Montserrat Alternates;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  text-align: right;
+  margin-left: 70px;
+}
+.input__container {
+  position: relative;
+}
+inputEndContainer {
+  position: relative;
+  width: 2px;
 }

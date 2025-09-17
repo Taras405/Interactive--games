@@ -24,9 +24,6 @@ const inputContainer = document.querySelector('.input__container');
 inputContainer.appendChild(input);
 inputContainer.appendChild(button);
 
-const inputEndContainer = document.querySelector('.input__container__end')
-
-
 const resultText = document.createElement('p');
 resultText.classList.add('p__center__result');
 form.appendChild(resultText);
@@ -69,8 +66,8 @@ buttonGuessNumber.appendChild(imgLupa);
 
 formEnd.appendChild(inputGuessNumber);
 formEnd.appendChild(buttonGuessNumber);
-inputEndContainer.appendChild(inputGuessNumber)
-inputEndContainer.appendChild(buttonGuessNumber)
+
+const inputEndContainer = document.querySelector('.input__container__end');
 
 const resultNumberText = document.createElement('p');
 resultNumberText.classList.add('p__end__result');
@@ -106,3 +103,5 @@ buttonGuessNumber.addEventListener('click', () => {
   randomNumber = Math.floor(Math.random() * 10) + 1;
   inputGuessNumber.value = '';
 });
+inputEndContainer.appendChild(inputGuessNumber);
+inputEndContainer.appendChild(buttonGuessNumber);
