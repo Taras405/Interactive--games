@@ -3,20 +3,24 @@
         <ul class="header__list">
             <li class="header-logo">
                 <a class="header-logo__link" href="#">
-                    <img src="" alt="Logo">
+                    <img class="header-logo__img" src="./sections/header/img/h_logo.svg" alt="Logo">
                     <h6 class="header-logo__heading">Coding</h6>
                     <p class="header-logo__text">Magic</p>
                 </a>
             </li>
-            <li class="header__link-list"><a class="header__link" href="#">Інтерактив</a>
+            <!-- <img class="header__arrow"
+                src="./sections/heaader/img/arrow.svg" alt="">-->
+            <li class="header__link-list"><a class="header__link" href="#">Інтерактив
+                    <span class="header__arrow">></span>
+                </a>
                 <a class="header__link" href="#">Наша команда</a>
                 <a class="header__link" href="#">Контакти</a>
             </li>
             <li class="header__toggle">
                 <button class="theme-toggle" aria-label="Toggle dark mode">
                     <span class="slider" aria-label="dark mode indicator">
-                        <img class="slider-icon sun" src="./sun_icon.png" alt="sun icon">
-                        <img class="slider-icon moon" src="./moon_icon.png" alt="moon icon">
+                        <img class="slider-icon sun" src="./sections/header/img/sun_icon.png" alt="sun icon">
+                        <img class="slider-icon moon" src="./sections/header/img/moon_icon.png" alt="moon icon">
                     </span>
                 </button>
             </li>
@@ -27,3 +31,60 @@
     </nav>
 </header>
 <script src="theme.js"></script>
+
+<!-- <header class="header">
+    <nav class="header__nav">
+        <ul class="header__list">
+            <li class="header-logo">
+                <a class="header-logo__link" href="#">
+                    <div class="logo-placeholder">CM</div>
+                    <h6 class="header-logo__heading">Coding</h6>
+                    <p class="header-logo__text">Magic</p>
+                </a>
+            </li>
+            <li class="header__link-list">
+                <a class="header__link" href="#">Інтерактив</a>
+                <a class="header__link" href="#">Наша команда</a>
+                <a class="header__link" href="#">Контакти</a>
+            </li>
+            <li class="header__toggle">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="slider" aria-label="dark mode indicator">
+                        <span class="slider-icon sun">☀️</span>
+                        <span class="slider-icon moon">🌙</span>
+                    </span>
+                </button>
+            </li>
+            <li>
+                <p class="toggle-text">Bimaemo, User!</p>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <section class="hero">
+        <h1>Dark Theme with Persistent Preference</h1>
+        <p>Your theme preference is saved automatically. Try refreshing the page!</p>
+        <div class="theme-info">
+            <p>Current theme: <span id="theme-status">light</span></p>
+            <button id="reset-theme">Reset to System Default</button>
+        </div>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <h3>Card Title</h3>
+            <p>This is a sample card to demonstrate the theme change.</p>
+        </div>
+        <div class="card">
+            <h3>Another Card</h3>
+            <p>Cards adapt to the current theme automatically.</p>
+        </div>
+        <div class="card">
+            <h3>Third Card</h3>
+            <p>All elements respect the dark/light theme preference.</p>
+        </div>
+    </section>
+
+<script src="script.js"></script> -->
