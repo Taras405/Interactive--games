@@ -1,41 +1,82 @@
- <footer class="footer">
-  <div class="container">
+<footer class="footer">
+  <div class="container footer-position">
     <!-- Лого -->
-    <div class="footer-logo">
-      <span class="logo-text">Coding <span>Magic</span></span>
-    </div>
+    <a class="footer-logo">
+      <img src="./sections/footer/Img/icon.svg" alt="icon-logo">
+    </a>
 
     <!-- Контакти -->
     <ul class="footer-contacts">
-      <p>Tel: <a href="tel: +38 (123) 456 78 90">+38 (123) 456 78 90</a></p>
-       <p>E-mail: <a href="mailto:CodingMagic@gmail.com">CodingMagic@gmail.com</a></p>
-       <p>Facebook: CodingMagic</p>
-      <p>Twitter: CodingMagic</p>
-      <p>Instagram: CodingMagic</p>
+      <li>
+        <p>Tel: <a href="tel: +38 (123) 456 78 90">+38 (123) 456 78 90</a></p>
+      </li>
+      <li>
+        <p>
+          E-mail:
+          <a href="mailto:CodingMagic@gmail.com">CodingMagic@gmail.com</a>
+        </p>
+      </li>
+      <li><p>Facebook: CodingMagic</p></li>
+      <li><p>Twitter: CodingMagic</p></li>
+      <li><p>Instagram: CodingMagic</p></li>
     </ul>
-    
     <div class="footer-subscribe">
-      <input class="input-email" type="email" placeholder="Ваша ел. адреса..." />
-      <button class="modal-open-btn" type="button" data-action="open-modal">Підписатися</button>
-      <div class="backdrop js-backdrop">
-        <div class="modal">
-          <button class="modal-close-btn" data-action="close-modal"><img src="./sections/footer/Img/close.svg" alt="Закрити" /></button>
-          <div class="modal-content">
-      <div class="icons">
-        <img src="./sections/footer/Img//game.svg" alt="pipette" class="icon top-right">
-        <img src="./sections/footer/Img//puzzle.svg" alt="puzzle" class="icon bottom-left">
-        <img src="./sections/footer/Img//sword.svg" alt="sword" class="icon top-left">
-        <img src="./sections/footer/Img//tic.svg" alt="tic tac toe" class="icon bottom-right">
-      </div>
-      <h2 class="h2">Дякую за підписку!</h2>
-    </div>
-        
-        </div>
-      </div>
-    </div>
+      <div>
+
+      <input
+        name="email"
+        class="input-email"
+        type="email"
+        placeholder="Ваша ел. адреса..."
+      />
+      <button class="modal-open-btn" type="button" data-action="open-modal">
+        Підписатися
+      </button>
+      </form>
       <p class="footer-note">
         *Підписавшись, Ви зможете ортимувати інформацію про новинки на сайті
       </p>
+    </div>
+  </div>
+  <!-- модальне вікно -->
+  <div class="backdrop js-backdrop">
+    <div class="modal">
+      <button class="modal-close-btn" data-action="close-modal">
+        <img src="./sections/footer/Img/close.svg" alt="Закрити" />
+      </button>
+      <div class="modal-content">
+        <ul class="icons">
+          <li>
+            <img
+              src="./sections/footer/Img/game.svg"
+              alt="pipette"
+              class="icon top-right"
+            />
+          </li>
+          <li>
+            <img
+              src="./sections/footer/Img/puzzle.svg"
+              alt="puzzle"
+              class="icon bottom-left"
+            />
+          </li>
+          <li>
+            <img
+              src="./sections/footer/Img/sword.svg"
+              alt="sword"
+              class="icon top-left"
+            />
+          </li>
+          <li>
+            <img
+              src="./sections/footer/Img/tic.svg"
+              alt="tic tac toe"
+              class="icon bottom-right"
+            />
+          </li>
+        </ul>
+        <h2 class="h2">Дякую за підписку!</h2>
+      </div>
     </div>
   </div>
 </footer>

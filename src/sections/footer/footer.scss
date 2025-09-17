@@ -1,62 +1,51 @@
-
 .footer {
   width: auto;
   background: #fff;
   padding-top: 60px;
-  font-family: Arial, sans-serif;
-  flex: 1;
+  padding-bottom: 60px;
+}
+
+.footer-position {
   display: flex;
   justify-content: space-between;
-  align-items: center;           
-  text-align: center;
-  padding: 20px 40px;
+  align-items: center;
 }
 
 .footer-logo {
-  position: absolute;
-  flex: 1;
   font-size: 22px;
   font-weight: bold;
-  padding-right: 1100px;
-  margin-top: auto;
-
-  .logo-icon {
-    display: block;
-    font-size: 26px;
-  }
 }
 
-.footer-subscribe {
-  position: relative;
-  left: 400px;
-  top: -50px;
-  flex: 1;
-  display: flex;
-  gap: 10px;
+
+.input-email {
+  width: 204px;
+  height: 35px;
+  border-radius: 20px;
+  padding-left: 10px;
+  border: none;
+  background-color: #aaa;
 }
 
-  .input-email {
-    width: 204px;
-    height: 35px;
-    border-radius: 20px;
-    border: 1px solid #aaa;
-    outline: none;
-  }
-
- .modal-open-btn {
+.modal-open-btn {
   border-radius: 20px;
   width: 107px;
   height: 35px;
   color: white;
   background-color: black;
+  margin-left: 36px;
+}
+
+.footer-note {
+  margin-top: 18px;
+  font-size: 6px;
 }
 
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
@@ -69,9 +58,9 @@
 }
 
 .modal {
-  display: flex;              // активуємо flexbox
-  justify-content: center;    // по центру по горизонталі
-  align-items: center;        // по центру по вертикалі
+  display: flex; // активуємо flexbox
+  justify-content: center; // по центру по горизонталі
+  align-items: center; // по центру по вертикалі
   text-align: center;
   position: fixed;
   width: 463px;
@@ -91,46 +80,42 @@
 
 .modal-close-btn {
   position: absolute;
-  top: 10px;   /* відступ зверху */
+  top: 10px; /* відступ зверху */
   right: 10px; /* відступ справа */
   background: none;
   border: none;
   cursor: pointer;
 }
-footer-contacts {
-    flex: 1;
-    text-align: center;
-    margin: 5px 0;
-    font-size: 14px;
+.footer-contacts {
+  font-size: 14px;
 }
 
- .icon {
+.icon {
   position: absolute;
-      width: 30px;
-      height: 30px;
+  width: 30px;
+  height: 30px;
 
-      &.top-left {
-        left: 43px;
-        top: 119px;
-      }
+  &.top-left {
+    left: 46px;
+    top: 89px;
+  }
 
-      &.bottom-left {
-        left: 87px;
-        bottom: 80px;
-      }
+  &.bottom-left {
+    left: 67px;
+    bottom: 60px;
+  }
 
-      &.top-right {
-        left: 450px;
-        top: 100px;
-      }
+  &.top-right {
+    left: 390px;
+    top: 90px;
+  }
 
-      &.bottom-right {
-        left: 380px;
-        top: 180px;
-      }
-    }
-    .h2{
-      font-size: 24px;
-      font-weight: bold;
-      
-    }
+  &.bottom-right {
+    left: 360px;
+    top: 155px;
+  }
+}
+.h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
