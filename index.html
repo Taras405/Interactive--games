@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAoCAYAAACIC2hQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJHSURBVHgB7ZgxchpBEEVfGR8AZ85MSiafgL2BdAP1DUTojPYJFBETOuQISETObCdQRHADdALW09rZEtgIZmcGUKBX1cXO0rP1t7tnpmshL1eciBZ5+eHsk7OfvHEKZ2tnbTKTO6IrZ5+pSuBxz//2At+cfXH2hwvQd3ZLJbDtr1ksFsvZbNb3PkoV7QEREf9AHn5TpX3s7JfdmM/nNu60Wi0TZy/Qc/bV2XdnTzTkI3l48Gbc2LUTOCjLks1mYyVQUAlcEUmuiBqFswlV2p/8eNXtdld+bCkvvc/JtrFjKFX93fpxZzgcltPpdGTXVCVhWG32/L2LcM3uArH0l/6+YVHs8waxSJrQjh8XnGh/3YfwktpjLPGrfwur0evI5wWjVBEqA3yvvN/9Eb+191MyobyIDImAeN9eoF8WsUozkcaYsMgbQgaxSnORhqV00sBfSBCrxIks/Jw7miFEiFXiRBr16RNz8ggNxCrxIg1L+ZJ4hACxSprItp87Jg3hgFglTaRxkzh/G2GPWCVdpHHP7rGZivCP2PqESE2ZHZkp9bmPek9+3peF9E234+ePyIeyJ9NCmlhht61LRTlQjkK82JGfl6ONUwLWjBAn1mpzQjpKg4UtNBMb2tYdQ4nYfYRwsXeEtXWHUBK2SCFMrKV8TTxKhn1cOC62aVu3jZLnsHlGeF1sQVxbB5lF1sjWQ7cZEN/W1SdiNpE1Bf8vmJS2riBtAQZTt3UjzkDKt6fC/z5wBlKE1ml75AykfHY0gSsSPiW+c0n+AiPA4Vv/LUGlAAAAAElFTkSuQmCC" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Грай у популярні інтерактивні ігри онлайн: камінь-ножиці-папір, калькулятор часу, гугл динозавр та інші. Весело та безкоштовно!"
+    />
+    <meta
+      name="keywords"
+      content="інтерактивні ігри, онлайн ігри, камінь ножиці папір, калькулятор, гугл динозавр, час, розваги, Coding Magic"
+    />
+
+    <meta name="author" content="GoIT group" />
     <title>Interactive Games</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,11 +21,61 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates&display=swap"
       rel="stylesheet"
     />
+    <style>
+      #mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease;
+      }
+
+      .loader {
+        width: 50px;
+        height: 50px;
+        border: 7px solid rgb(211, 211, 211);
+        border-top: 7px solid #6f6f6f;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+
+    <script defer>
+      window.addEventListener('DOMContentLoaded', () => {
+        const mask = document.getElementById('mask');
+        setTimeout(() => {
+          mask.classList.add('hide');
+          setTimeout(() => {
+            mask.remove();
+          }, 600);
+        }, 250);
+      });
+    </script>
     <script type="module" crossorigin src="/Interactive--games/assets/index.91c286de.js"></script>
     <link rel="stylesheet" href="/Interactive--games/assets/index.dbe093ec.css">
   </head>
 
   <body>
+    <div id="mask">
+      <div class="loader"></div>
+    </div>
     <header class="header">
     <nav class="header__nav">
         <ul class="header__list">
