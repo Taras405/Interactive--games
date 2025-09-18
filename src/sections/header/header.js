@@ -75,16 +75,165 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 
 //TODO arrow
+// document.querySelectorAll('.header__link').forEach(link => {
+//   link.addEventListener('click', function (e) {
+//     const arrow = this.querySelector('.header__arrow');
+//     arrow.classList.toggle('rotated');
+//   });
+// });
 
-document.querySelectorAll('.header__link').forEach(link => {
-  link.addEventListener('click', function (e) {
-    // Prevent default if needed (or allow navigation)
-    // e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  const interactiveLink = document.querySelector('.header__link[href="#"]'); // The "Інтерактив" link
+  const arrow = document.querySelector('.header__arrow'); // The > arrow span
+  const modalBackdrop = document.getElementById('interactiveModal');
+  const modalInput = document.querySelector('.modal-input');
+  const saveButton = document.querySelector('.modal-btn');
+  const closeBtn = document.querySelector('.modal-content .close');
+  const toggleText = document.querySelector('.toggle-text');
 
-    // Find the arrow inside this link
-    const arrow = this.querySelector('.header__arrow');
+  // Check if there's a saved name in localStorage
+  const savedName = localStorage.getItem('userName');
+  if (savedName) {
+    toggleText.textContent = `Вітаємо, ${savedName}!`;
+  }
 
-    // Toggle the rotated class
-    arrow.classList.toggle('rotated');
+  // Function to open modal and rotate arrow
+  function openModal() {
+    modalBackdrop.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    arrow.classList.add('rotated'); // Rotate arrow
+  }
+
+  // Function to close modal and reset arrow
+  function closeModal() {
+    modalBackdrop.classList.remove('show');
+    document.body.style.overflow = '';
+    arrow.classList.remove('rotated'); // Reset arrow
+  }
+
+  // Open modal when clicking "Інтерактив" link
+  interactiveLink.addEventListener('click', e => {
+    e.preventDefault();
+    openModal();
+  });
+
+  // Save button click handler
+  saveButton.addEventListener('click', () => {
+    const name = modalInput.value.trim();
+
+    if (name) {
+      localStorage.setItem('userName', name);
+      toggleText.textContent = `Вітаємо, ${name}!`;
+      closeModal(); // Close and reset arrow
+    } else {
+      alert('Будь ласка, введіть своє ім’я!');
+    }
+  });
+
+  // Close modal when clicking the X
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close modal when clicking outside
+  modalBackdrop.addEventListener('click', e => {
+    if (e.target === modalBackdrop) {
+      closeModal();
+    }
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modalBackdrop.classList.contains('show')) {
+      closeModal();
+    }
+  });
+});
+
+//TODO modal
+document.addEventListener('DOMContentLoaded', () => {
+  const interactiveLink = document.querySelector('.header__link[href="#"]');
+  const modalBackdrop = document.getElementById('interactiveModal');
+  const closeBtn = document.querySelector('.modal-content .close');
+
+  interactiveLink.addEventListener('click', e => {
+    e.preventDefault();
+    modalBackdrop.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modalBackdrop.classList.remove('show');
+    document.body.style.overflow = '';
+  });
+
+  modalBackdrop.addEventListener('click', e => {
+    if (e.target === modalBackdrop) {
+      modalBackdrop.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modalBackdrop.classList.contains('show')) {
+      modalBackdrop.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+//TODO user input
+
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+  const modalBackdrop = document.getElementById('interactiveModal');
+  const modalInput = document.querySelector('.modal-input');
+  const saveButton = document.querySelector('.modal-btn');
+  const closeBtn = document.querySelector('.modal-content .close');
+  const toggleText = document.querySelector('.toggle-text'); // This is where we'll show "Вітаємо, [Name]"
+
+  // Check if there's a saved name in localStorage
+  const savedName = localStorage.getItem('userName');
+  if (savedName) {
+    toggleText.textContent = `Вітаємо, ${savedName}!`;
+  }
+
+  // Save button click handler
+  saveButton.addEventListener('click', () => {
+    const name = modalInput.value.trim();
+
+    if (name) {
+      // Save name to localStorage
+      localStorage.setItem('userName', name);
+
+      // Update the welcome text
+      toggleText.textContent = `Вітаємо, ${name}!`;
+
+      // Close the modal
+      modalBackdrop.classList.remove('show');
+      document.body.style.overflow = '';
+    } else {
+      alert('Будь ласка, введіть своє ім’я!');
+    }
+  });
+
+  // Close modal when clicking the X
+  closeBtn.addEventListener('click', () => {
+    modalBackdrop.classList.remove('show');
+    document.body.style.overflow = '';
+  });
+
+  // Close modal when clicking outside
+  modalBackdrop.addEventListener('click', e => {
+    if (e.target === modalBackdrop) {
+      modalBackdrop.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modalBackdrop.classList.contains('show')) {
+      modalBackdrop.classList.remove('show');
+      document.body.style.overflow = '';
+    }
   });
 });
