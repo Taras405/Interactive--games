@@ -52,13 +52,11 @@ document.getElementById('timeBtn').addEventListener('click', () => {
     return;
   }
 
-  const days = Math.floor(m / 1440);
-  const hours = Math.floor((m % 1440) / 60);
-  const mins = m % 60;
-  const secs = m * 60;
+  const totalSeconds = m * 60;
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const mins = Math.floor((totalSeconds % 3600) / 60);
+  const secs = totalSeconds % 60;
 
   out.textContent = `${days} дн. ${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
 });
-
-
-
