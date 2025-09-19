@@ -20,6 +20,7 @@ body {
   font-weight: 400;
 
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -60,3 +61,4 @@ small,
 .heder-link {
   color: inherit;
 }
+
