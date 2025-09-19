@@ -5,13 +5,6 @@
   justify-content: center;
 }
 
-.titleGame {
-  font-size: 2rem;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 .game-container {
   display: flex;
   flex-direction: column;
@@ -58,10 +51,8 @@
 
 #game-over h2 {
   margin: 0 0 10px 0;
-  font-size: 2rem;
 }
 
 #game-over p {
   margin: 0;
-  font-size: 1rem;
 }

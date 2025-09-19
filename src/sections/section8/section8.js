@@ -1,7 +1,7 @@
 const scientistsHtml = document.querySelector('.section8');
 scientistsHtml.innerHTML = `
     <div class="container">
-    <h2 class="titleGame">Обери вченого/их</h2>
+    <h2 class="titleGame">Обери вченого</h2>
     <form class="scientists">
       <div class="scientists__slots">
         <div class="slot"></div>
