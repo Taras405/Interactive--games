@@ -8,13 +8,11 @@
                     <p class="header-logo__text">Magic</p>
                 </a>
             </li>
-            <!-- <img class="header__arrow"
-                src="./sections/heaader/img/arrow.svg" alt="">-->
             <li class="header__link-list"><a class="header__link" href="#">Інтерактив
-                    <span class="header__arrow">></span>
+                    <img src="./sections/header/img/arrow.svg" class="header__arrow"></img>
                 </a>
-                <a class="header__link" href="#">Наша команда</a>
-                <a class="header__link" href="#">Контакти</a>
+                <a class="header__link" href="#team">Наша команда</a>
+                <a class="header__link" href="#contacts">Контакти</a>
             </li>
             <li class="header__toggle">
                 <button class="theme-toggle" aria-label="Toggle dark mode">
@@ -25,66 +23,30 @@
                 </button>
             </li>
             <li>
-                <p class="toggle-text">Bimaemo, User!</p>
+                <p class="toggle-text">Bimаємo, User!</p>
             </li>
         </ul>
     </nav>
+
+    <ul class="modal-backdrop" id="interactiveModal">
+        <li class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-heading">Привіт! <br>
+                Ви потрапили на сайт інтерактивних ігор та завдань <br>
+                Надіємось, що вам сподобається і ви отримаєте позитивні емоції! <br>
+                Бажаємо Вам гарно провести час!</h2>
+            <p class="modal-text">Введіть своє ім’я</p>
+            <input class="modal-input" placeholder="Ваше ім’я..." type="text">
+            <button class="modal-btn" class="modal-button">Зберегти</button>
+            <div class="icons-container">
+                <img src="./sections/header/img/modal/sword.png" alt="sword" class="icons-container__icon icon-one">
+                <img src="./sections/header/img/modal/controller.png" alt="controller"
+                    class="icons-container__icon icon-two">
+                <img src="./sections/header/img/modal/puzzle.png" alt="puzzle" class="icons-container__icon icon-three">
+                <img src="./sections/header/img/modal/tic.png" alt="tic-tac-toe"
+                    class="icons-container__icon icon-four">
+            </div>
+        </li>
+    </ul>
 </header>
 <script src="theme.js"></script>
-
-<!-- <header class="header">
-    <nav class="header__nav">
-        <ul class="header__list">
-            <li class="header-logo">
-                <a class="header-logo__link" href="#">
-                    <div class="logo-placeholder">CM</div>
-                    <h6 class="header-logo__heading">Coding</h6>
-                    <p class="header-logo__text">Magic</p>
-                </a>
-            </li>
-            <li class="header__link-list">
-                <a class="header__link" href="#">Інтерактив</a>
-                <a class="header__link" href="#">Наша команда</a>
-                <a class="header__link" href="#">Контакти</a>
-            </li>
-            <li class="header__toggle">
-                <button class="theme-toggle" aria-label="Toggle dark mode">
-                    <span class="slider" aria-label="dark mode indicator">
-                        <span class="slider-icon sun">☀️</span>
-                        <span class="slider-icon moon">🌙</span>
-                    </span>
-                </button>
-            </li>
-            <li>
-                <p class="toggle-text">Bimaemo, User!</p>
-            </li>
-        </ul>
-    </nav>
-</header>
-
-<main class="content">
-    <section class="hero">
-        <h1>Dark Theme with Persistent Preference</h1>
-        <p>Your theme preference is saved automatically. Try refreshing the page!</p>
-        <div class="theme-info">
-            <p>Current theme: <span id="theme-status">light</span></p>
-            <button id="reset-theme">Reset to System Default</button>
-        </div>
-    </section>
-
-    <section class="cards">
-        <div class="card">
-            <h3>Card Title</h3>
-            <p>This is a sample card to demonstrate the theme change.</p>
-        </div>
-        <div class="card">
-            <h3>Another Card</h3>
-            <p>Cards adapt to the current theme automatically.</p>
-        </div>
-        <div class="card">
-            <h3>Third Card</h3>
-            <p>All elements respect the dark/light theme preference.</p>
-        </div>
-    </section>
-
-<script src="script.js"></script> -->
