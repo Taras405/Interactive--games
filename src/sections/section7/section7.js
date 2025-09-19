@@ -1,4 +1,3 @@
-const sliderList = document.querySelector('.team-slider__list');
 const slides = document.querySelectorAll('.team-slider__item');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -13,10 +12,12 @@ slides.forEach((_, index) => {
   dotsContainer.appendChild(dot);
 });
 
-const dots = document.querySelectorAll('.team-slider__dots li');
+const dots = dotsContainer.querySelectorAll('li');
 
 function showSlide(index) {
-  sliderList.style.transform = `translateX(-${index * 100}%)`;
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
 
   dots.forEach((dot, i) => {
     dot.classList.toggle('active', i === index);
