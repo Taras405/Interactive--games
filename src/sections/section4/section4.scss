@@ -5,8 +5,9 @@
   justify-content: center;
 }
 
-.titleGoogleDinosaur {
+.titleGame {
   font-size: 2rem;
+  margin-top: 10px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -51,8 +52,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-
-  padding: 20px;
   border-radius: 10px;
   display: none;
 }
