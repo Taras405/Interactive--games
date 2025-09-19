@@ -331,25 +331,12 @@ body.dark-mode {
   }
 
   .icons-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    z-index: 10;
-    flex-direction: unset;
-    flex-wrap: unset;
-  }
-
-  .icons-container__icon {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    z-index: 10;
+    &__icon {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      z-index: 10;
+    }
   }
 
   .icon-one {
