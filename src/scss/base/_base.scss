@@ -18,6 +18,13 @@ body {
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 12px;
   font-weight: 400;
+
+  scroll-behavior: smooth;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #fff;
 }
 
 .titleGame {
@@ -31,4 +38,25 @@ body {
 .line {
   width: 536px;
   margin: 36px auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li,
+button,
+input,
+textarea,
+div,
+strong,
+em,
+small,
+.heder-link {
+  color: inherit;
 }
